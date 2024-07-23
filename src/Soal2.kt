@@ -60,7 +60,7 @@ fun main() {
 
                 println("\nTotal Sebelum Diskon: Rp ${String.format("%.0f", totalHarga)}")
                 println("Total Diskon: Rp ${String.format("%.0f", diskonResult.totalDiskon)}")
-                println("Total Harga Setelah Diskon: Rp ${String.format("%.0f", diskonResult.totalHargaSetelahDiskon)}")
+                println("Total Harga Setelah Diskon: Rp ${String.format("%.0f", diskonResult.totalHargaSetelahDiskon)}\n")
             }
             2 -> {
                 println("Keluar dari aplikasi.")
