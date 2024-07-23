@@ -1,4 +1,5 @@
 import model.RevenueShare
+import java.util.Scanner
 
 fun hitungShareRevenue(
     hargaSebelumMarkup: Double,
@@ -13,12 +14,23 @@ fun hitungShareRevenue(
 }
 
 fun main() {
-    val hargaSebelumMarkup = 10000.0
-    val markupPersen = 10.0
-    val sharePersen = 20.0
+    val input = Scanner(System.`in`)
+
+    print("Masukkan nama barang: ")
+    val namaBarang = input.nextLine()
+
+    print("Masukkan harga barang sebelum markup: ")
+    val hargaSebelumMarkup = input.nextDouble()
+
+    print("Masukkan persentase markup: ")
+    val markupPersen = input.nextDouble()
+
+    print("Masukkan persentase share: ")
+    val sharePersen = input.nextDouble()
 
     val hasil = hitungShareRevenue(hargaSebelumMarkup, markupPersen, sharePersen)
 
+    println("\nNama Barang: $namaBarang")
     println("Net untuk Resto: Rp ${String.format("%.2f", hasil.netUntukResto)}")
     println("Share untuk Ojol: Rp ${String.format("%.2f", hasil.shareUntukOjol)}")
 }
